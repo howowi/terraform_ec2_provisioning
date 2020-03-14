@@ -1,5 +1,7 @@
 provider "aws" {
+  skip_requesting_account_id = true
   profile    = "default"
+  version    = "~> 2.0"
   region     = "ap-southeast-1"
 }
 
