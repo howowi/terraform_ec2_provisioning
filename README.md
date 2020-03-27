@@ -36,8 +36,8 @@ variable "public_sshkey" {
 ```
 Success! The configuration is valid.
 ```
-3) Then, run `terraform plan` to see review the deployment. The output can be seen in terraform_plan_output.txt file.
-4) To start the deployment onto AWS, run `terraform apply`.
+3) Then, run `terraform plan` to review the deployment. The output can be seen in terraform_plan_output.txt file.
+4) To start the deployment, run `terraform apply`.
 5) You will be prompted the message below and just type `yes` and press enter to continue.
 ```
 Do you want to perform these actions?
