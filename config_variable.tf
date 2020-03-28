@@ -10,8 +10,10 @@ variable "subnet_cidr" {
   default = "192.168.0.0/24"
 }
 
+## choose one of the images and remove the other
 variable "image" {
   default = "ami-09a4a9ce71ff3f20b"
+#redhat  default = "ami-01b02e6dd3efebd61"
 }
 
 variable "type" {
