@@ -18,7 +18,7 @@ aws_secret_access_key = P****************************y
 2) (**Only applicable to MacOS or Linux**) Run the `add_sshkey.sh` script to add the public SSH key in the instance_config.tf file.
   * ensure the ssh public key is stored in the default SSH directory `~/.ssh/`
   * ensure the add_sshkey.sh file is executable by executing `$ chmod +x add_sshkey.sh`
-3) (**Only applicable Putty on Windows**) Copy and paste the SSH public key into the config_variable.tf file under the "public_sshkey" variable
+3) (**Only applicable to Putty on Windows**) Copy and paste the SSH public key into the config_variable.tf file under the "public_sshkey" variable
 ```
 variable "public_sshkey" {
    default = "ssh-rsa <your ssh key here>"
