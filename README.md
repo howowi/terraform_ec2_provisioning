@@ -32,7 +32,7 @@ variable "public_sshkey" {
 * OS image
 * EC2 instance type 
 * SSH public key (either manually key in or use the add_sshkey.sh script for MacOS and Linux machine)
-3) After cloning the  
+3) After cloning the repo from Github, first, the terraform directory must be initialized by running `$ terraform init`.
 2) Check that no typo or syntax error by running `$ terraform validate` and you should see
 ```
 Success! The configuration is valid.
