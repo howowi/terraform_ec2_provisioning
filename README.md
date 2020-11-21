@@ -11,8 +11,8 @@ aws_secret_access_key = P****************************y
 ```
 
 ## Setup SSH Public Key to access the EC2 instance
-1) Before applying the Terraform configuration, EC2 keypair will need the SSH public key from the client to access the EC2 instance via SSH.
-1) First, generate SSH keys in the local machine if it's not yet created.
+1) Before applying the Terraform configuration, you can either make use of current EC2 key pair or generate a new EC2 key pair using SSH public key from the client to access the EC2 instance via SSH.
+1) To generate new key pair using client SSH public key, firstly, generate SSH keys in the client machine if it's not yet created.
   * For MacOS or Linux: `$ ssh-keygen -t rsa -b 4096`
   * For Putty on Windows: Follow this link https://www.ssh.com/ssh/putty/windows/puttygen
 2) (**Only applicable to MacOS or Linux**) Run the `add_sshkey.sh` script to add the public SSH key in the instance_config.tf file.
@@ -25,7 +25,7 @@ variable "public_sshkey" {
 }
 ```
 ## Execute the Terraform Config
-1) Variables of the EC2 and VPC configuration have been defined in config_variable.tf file as shown below is supported without modifying the main config file. 
+1) Variables of the EC2 and VPC configuration have been defined in config_variable.tf file as shown below: 
 * AWS region
 * VPC CIDR
 * Subnet CIDR
@@ -47,7 +47,7 @@ Do you want to perform these actions?
 
   Enter a value: yes
 ```
-6) Once the deployment is successfull, you will see the public IP address of the EC2 instance as seen below. The public IP address can be used to SSH to the EC2 instance via the local machine.
+6) Once the deployment is successful, you will see the public IP address of the EC2 instance as seen below. The public IP address can be used to SSH to the EC2 instance via the client machine.
 ```
 Apply complete! Resources: 7 added, 0 changed, 0 destroyed.
 
